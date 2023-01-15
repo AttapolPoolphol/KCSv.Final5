@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar align="center">
+    <ion-buttons slot="start">
+      <ion-button (click)="goback()" fill="clear" color="light">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    ประวัติการบริจาค
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+
+  <ion-text class="ion-padding">รายการบริจาคทั้งหมด</ion-text>
+  <ion-card color="light" class="ion-text-center" *ngFor="let item of slip | async">
+    <ion-card-header>
+      <ion-card-title>
+        <div class="ion-text-start">{{item.project}} </div>
+        
+        <h5 align = 'left'>วันที่ {{item.ddate| date: 'dd/MM/yyyy H:mm'}}</h5> <br>
+        <div class="ion-text-start">
+          <ion-text color="medium">
+            เข้าบัญชีธนาคาร{{item.bank}}</ion-text>
+        </div>
+        <div class="ion-text-end">{{ item.Volume | number}}   bath</div>
+        <div class="fi">*ชำระเงินเสร็จสิ้น*</div>
+        
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

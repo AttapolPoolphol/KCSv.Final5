@@ -1,0 +1,51 @@
+<ion-app>
+  <ion-menu menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>รายการ</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="person-circle" slot="start"></ion-icon>
+            <ion-label (click)="goAccount()">My account</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="person-circle" slot="start"></ion-icon>
+            <ion-label (click)="goDonate()">ประวัติการบริจาค</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="information-circle" slot="start"></ion-icon>
+            <ion-label (click)="goInfo()">เกี่ยวกับเรา</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="pencil" slot="start"></ion-icon>
+            <ion-label (click)="edit()">แก้ไขข้อมูล</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="log-out" slot="start"></ion-icon>
+            <ion-label (click)="logoutUser()">ออกจากระบบ</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

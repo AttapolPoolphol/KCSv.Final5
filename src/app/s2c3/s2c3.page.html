@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"  fill="clear" color="black">
+        <ion-icon name="arrow-back-outline"></ion-icon>      
+      </ion-button>
+    </ion-buttons>  
+    <h4>โครงการ"สานสายใยจากดวงใจของหนู"</h4>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+  <ion-slides [options]="option" class="ion-margin-top">
+      <ion-slide>
+        <ion-card>
+          <img src="assets/image/s2c31.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/image/s2c32.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/image/s2c33.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/image/s2c34.jpg">
+        </ion-card>
+      </ion-slide>
+  </ion-slides>
+
+  <ion-img  src="assets/icon/target.png"></ion-img>
+  <!--<ion-img class="c" src="assets/icon/dollar.png"></ion-img>-->
+  <ion-text class="amount">
+    100,000 บาท 
+    <div class="a">เป้าหมายในการบริจาค</div>
+  </ion-text>
+  <br>
+  <ion-list *ngIf="items"  class=" ion-padding" >
+    <ion-item-sliding *ngFor="let item of items | async">
+      <ion-progress-bar [value]="item.note.s2c3/100"></ion-progress-bar>
+    </ion-item-sliding>
+  </ion-list>
+
+  
+
+  
+    <ion-card class="ion-padding">
+  <ion-text class="ion-padding">
+    ร่วมสนับสนุนโครงการ ”สานสายใย จากดวงใจของหนู” 
+    เพื่อเป็นทุนอาชีพในการนำไปประกอบอาชีพ ช่างทอผ้ากะเหรี่ยงและผลิตภัณฑ์จากผ้า 
+    จากฝีมือเด็กและเยาวชนในพื้นที่ห่างไกล
+  </ion-text><br>
+  <div align = 'center'><br>
+  <ion-button (click)="goTransfer()">ร่วมบริจาค</ion-button>
+</div></ion-card>

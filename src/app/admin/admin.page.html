@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>admin</ion-title>
+    <ion-button (click)="progressbar()">
+      progressbar
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="light" class="ion-text-center" *ngFor="let item of slip | async">
+    <ion-card-header>
+      <ion-card-title>
+        {{ item.dataname }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="item.filepath" />
+      <a [href]="item.filepath" target="_blank" rel="noopener">Download</a>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

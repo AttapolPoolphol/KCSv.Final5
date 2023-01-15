@@ -1,0 +1,26 @@
+ion-content{
+    --background: rgb(236, 255, 235);
+    h1{
+        font-size: larger;
+        font-family:'Kanit', sans-serif;
+        color: rgb(216, 197, 29);
+    }
+    
+}
+
+ion-text{
+    font-family:'Kanit', sans-serif;
+    font-size: small;
+    margin-left: 10%;
+    font-weight: 300;
+
+}
+
+ion-title{
+    font-family:'Kanit', sans-serif;
+    color: white;
+    margin-right: 15%;
+}
+ion-toolbar{
+    --background: green;
+}

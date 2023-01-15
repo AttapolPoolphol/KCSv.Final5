@@ -1,0 +1,228 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title> เปอร์เซ็นโครงการ </ion-title>
+
+    <ion-button color="primary" (click)="openForm()">
+      เพิ่ม
+    </ion-button>
+
+    <ion-button color="primary" (click)="admin()">
+      admin
+    </ion-button>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+  <form *ngIf="isToogle" novalidate #note="ngForm">
+    <!--card 1-->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">เปอร์เซ็นโครงการs1c1</ion-label>
+        <ion-input [(ngModel)]="s1c1" type="text" name="s1c1" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">วันที่เปลี่ยนแปลง</ion-label>
+        <ion-datetime [(ngModel)]="date1" type="text" displayFormat="DD MMM YYYY" name="date1" required>
+        </ion-datetime>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!note.form.valid"
+          (click)="save(note.value)">
+          {{ isAdd ? 'เพิ่ม' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+
+    <!--card 2-->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">เปอร์เซ็นโครงการs2c1</ion-label>
+        <ion-input [(ngModel)]="s2c1" type="text" name="s2c1" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">วันที่เปลี่ยนแปลง</ion-label>
+        <ion-datetime [(ngModel)]="date2" type="text" displayFormat="DD MMM YYYY" name="date2" required>
+        </ion-datetime>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!note.form.valid"
+          (click)="save(note.value)">
+          {{ isAdd ? 'เพิ่ม' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+
+    <!--card 3-->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">เปอร์เซ็นโครงการs2c2</ion-label>
+        <ion-input [(ngModel)]="s2c2" type="text" name="s2c2" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">วันที่เปลี่ยนแปลง</ion-label>
+        <ion-datetime [(ngModel)]="date3" type="text" displayFormat="DD MMM YYYY" name="date3" required>
+        </ion-datetime>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!note.form.valid"
+          (click)="save(note.value)">
+          {{ isAdd ? 'เพิ่ม' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+
+    <!--card 4-->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">เปอร์เซ็นโครงการs2c3</ion-label>
+        <ion-input [(ngModel)]="s2c3" type="text" name="s2c3" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">วันที่เปลี่ยนแปลง</ion-label>
+        <ion-datetime [(ngModel)]="date4" type="text" displayFormat="DD MMM YYYY" name="date4" required>
+        </ion-datetime>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!note.form.valid"
+          (click)="save(note.value)">
+          {{ isAdd ? 'เพิ่ม' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+
+    <!--card 5-->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">เปอร์เซ็นโครงการs3c1</ion-label>
+        <ion-input [(ngModel)]="s3c1" type="text" name="s3c1" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">วันที่เปลี่ยนแปลง</ion-label>
+        <ion-datetime [(ngModel)]="date5" type="text" displayFormat="DD MMM YYYY" name="date5" required>
+        </ion-datetime>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!note.form.valid"
+          (click)="save(note.value)">
+          {{ isAdd ? 'เพิ่ม' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+
+    <!--card 6-->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">เปอร์เซ็นโครงการs3c2</ion-label>
+        <ion-input [(ngModel)]="s3c2" type="text" name="s3c2" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">วันที่เปลี่ยนแปลง</ion-label>
+        <ion-datetime [(ngModel)]="date6" type="text" displayFormat="DD MMM YYYY" name="date6" required>
+        </ion-datetime>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button color="{{ isAdd ? 'primary': 'warning' }}" class="ion-margin-top" [disabled]="!note.form.valid"
+          (click)="save(note.value)">
+          {{ isAdd ? 'เพิ่ม' : 'แก้ไข' }}
+        </ion-button>
+      </div>
+    </ion-list>
+
+  </form>
+
+
+  <ion-list *ngIf="items">
+
+    <ion-item-sliding *ngFor="let item of items | async">
+
+      <ion-item (click)="select(item)">
+        <ion-label>
+          <ion-text color="primary">
+            s1c1
+            <h1>{{item.note.s1c1}}</h1>
+          </ion-text>
+          <p>{{item.note.date1 | date: 'dd MMMM yyyy'}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="select(item)">
+        <ion-label>
+          <ion-text color="primary">
+            s2c1
+            <h1>{{item.note.s2c1}}</h1>
+          </ion-text>
+          <p>{{item.note.date2 | date: 'dd MMMM yyyy'}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="select(item)">
+        <ion-label>
+          <ion-text color="primary">
+            s2c2
+            <h1>{{item.note.s2c2}}</h1>
+          </ion-text>
+          <p>{{item.note.date3 | date: 'dd MMMM yyyy'}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="select(item)">
+        <ion-label>
+          <ion-text color="primary">
+            s2c3
+            <h1>{{item.note.s2c3}}</h1>
+          </ion-text>
+          <p>{{item.note.date4 | date: 'dd MMMM yyyy'}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="select(item)">
+        <ion-label>
+          <ion-text color="primary">
+            s3c1
+            <h1>{{item.note.s3c1}}</h1>
+          </ion-text>
+          <p>{{item.note.date5 | date: 'dd MMMM yyyy'}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="select(item)">
+        <ion-label>
+          <ion-text color="primary">
+            s3c2
+            <h1>{{item.note.s3c2}}</h1>
+          </ion-text>
+          <p>{{item.note.date6 | date: 'dd MMMM yyyy'}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options>
+
+        <ion-item-option color="danger" (click)="delete(item)">
+          <ion-icon slot="end" name="trash"></ion-icon>
+          ลบ
+        </ion-item-option>
+
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

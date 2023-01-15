@@ -1,0 +1,18 @@
+ion-app{
+    ion-title{
+        font-family:'Kanit', sans-serif;
+    }
+    ion-label{
+        font-family:'Kanit', sans-serif;
+    }
+    ion-button{
+        font-family:'Kanit', sans-serif;
+        font-size: medium;
+        color: darkcyan;
+        padding-top: 0%;
+    }
+}
+
+.my-custom-menu {
+    --width: 500px;
+  }

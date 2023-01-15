@@ -1,0 +1,48 @@
+ion-header{
+    ion-toolbar{
+            font-family:'Kanit', sans-serif;
+            padding-right: 50px;
+    --background: green;
+            color: white;
+
+    }
+
+    
+}
+ion-content{
+    
+    --background: rgb(236, 255, 235);
+
+  .back-blob {
+    z-index: -1;
+    width: 600px;
+    position: absolute;
+    left: -50%;
+    top: 0;
+  }
+    ion-card{
+        font-family:'Kanit', sans-serif;
+
+    }
+    ion-text{
+        font-family:'Kanit', sans-serif;
+        font-size: x-large;
+    }
+    .small{
+        font-family:'Kanit', sans-serif;
+        font-size: medium;
+        color: black;
+    }
+    ion-card{
+        border-radius: 20px;
+    }
+    ion-button{
+        font-family:'Kanit', sans-serif;
+
+    }
+    img{
+        padding-top: 150px;
+        padding-left: 20px;
+    }
+
+}

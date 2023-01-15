@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"  fill="clear" color="black">
+        <ion-icon name="arrow-back-outline"></ion-icon>      
+      </ion-button>
+    </ion-buttons>  
+    <h4>โครงการห้องนอนอุปถัมภ์</h4>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+  <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card>
+        <img src="assets/image/s3c11.jpg">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/image/s3c12.jpg">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/image/s3c13.jpg">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/image/s3c14.jpg">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-img  src="assets/icon/target.png"></ion-img>
+  <!--<ion-img class="c" src="assets/icon/dollar.png"></ion-img>-->
+  <ion-text class="amount">
+    100,000 บาท 
+    <div class="a">เป้าหมายในการบริจาค</div>
+  </ion-text>
+  <br>
+  <ion-list *ngIf="items"  class=" ion-padding" >
+    <ion-item-sliding *ngFor="let item of items | async">
+      <ion-progress-bar [value]="item.note.s3c2/100"></ion-progress-bar>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-card class="ion-padding">
+  <ion-card-content>
+    เนื่องจากในพื้นที่จังหวัดตากจะมีเด็กๆที่บ้านอยู่ในพื้นที่ห่างไกลตามแทบทุรกันดาร 
+    จึงทำให้มีการเดินทางมาเรียนยากลำบาก เพราะเส้นทางที่ยังไม่มีถนนตัดผ่าน 
+    จึงทำให้เด็กๆบางส่วนต้องอาศัยพักพึงอยู่ที่โรงเรียน และด้วยทางโรงเรียนยังไม่มี
+    งบประมาณไม่เพียงพอต่อเด็กๆ ทางมูลนิธิจึงเป็นสะพานในการของร่วมสนับสนุนทุน
+     เพื่อนำไปพัฒนาห้องนอนของเด็กหอเพื่อพัฒนาคุณภาพชีวิตให้ดียิ่งขึ้น
+  </ion-card-content>
+  <div align = 'center'>
+  <ion-button (click)="goTransfer()">ร่วมบริจาค</ion-button>
+</div>
+</ion-card>
+</ion-content>

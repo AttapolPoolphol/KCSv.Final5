@@ -1,0 +1,148 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="assets/icon/logo.png"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button class="bordered" fill="solid" color="light">
+        <ion-icon color="primary" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img src="assets/icon/banner1.png">
+    </ion-avatar>
+    <ion-label>
+      <p>Hello,</p>
+      <h3>{{username}}</h3>
+    </ion-label>
+  </ion-item>
+
+  <ion-toolbar>
+    <ion-segment scrollable="true" value="0" mode="ios" [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="0">
+        <ion-label>บริจาคทุนการศึกษา</ion-label>
+        <ion-icon name="school"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        <ion-label>บริจาคเพื่อทุนอาชีพ</ion-label>
+        <ion-icon name="newspaper"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>บริจาคระดมทุน</ion-label>
+        <ion-icon name="cash-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="3">
+        <ion-label>บริจาคสิ่งของ</ion-label>
+        <ion-icon name="gift"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content scrollable fullscreen>
+  <ion-slides #slides pager="false" [options]="sliderOptions" (ionSlideDidChange)="slideShanged(slides)"
+    (ionSlideDidLoad)="slideShanged(slides)">
+    <!--Slide 1 -->
+    <ion-slide>
+      <ion-infinite-scroll>
+        <ion-grid>
+
+          <ion-row>
+            <ion-col>
+              <img class="banner" src="assets/icon/banner1.png">
+            </ion-col>
+          </ion-row>
+
+          <!--card 1-->
+          <ion-card mode="ios" *ngFor="let item of items | async; index as i">
+            <ion-list *ngIf="item.type == 'บริจาคทุนการศึกษา'">
+            <img src="{{item.image}}" (click)="gos1c1(item.project_id)">
+            
+            <!-- <ion-list *ngIf="item">
+              <ion-item-sliding >
+                <ion-progress-bar [value]="item.note.s1c1/100"></ion-progress-bar>
+              </ion-item-sliding>
+            </ion-list> -->
+            <ion-card-header>
+              <ion-card-title align="left">{{item.nameproject}}"
+              </ion-card-title>
+            </ion-card-header>
+          </ion-list>
+          </ion-card>
+        </ion-grid>
+      </ion-infinite-scroll>
+    </ion-slide>
+
+    <!--Slide 2 -->
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="assets/icon/banner2.png">
+          </ion-col>
+        </ion-row>
+
+        <!--card 1-->
+        <ion-card mode="ios" *ngFor="let item of items | async; index as i">
+          <ion-list *ngIf="item.type == 'บริจาคเพื่อทุนอาชีพ'">
+          <img src="{{item.image}}" (click)="gos2c1(item.project_id)">
+            <!-- <ion-item-sliding *ngFor="let item of items | async">
+              <ion-progress-bar [value]="item.note.s2c1/100"></ion-progress-bar>
+            </ion-item-sliding> -->
+            <ion-card-header>
+              <ion-card-title align="left">{{item.nameproject}}"
+              </ion-card-title>
+            </ion-card-header>
+          </ion-list>
+        </ion-card>
+      </ion-grid>
+    </ion-slide>
+
+    <!--Slide 3 -->
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="assets/icon/banner3.png">
+          </ion-col>
+        </ion-row>
+
+        <!--card 1-->
+        <ion-card mode="ios" *ngFor="let item of items | async; index as i">
+          <ion-list *ngIf="item.type == 'บริจาคระดมทุน'">
+          <img src="{{item.image}}" (click)="gos3c1(item.project_id)">
+          <!-- <ion-list *ngIf="items">
+            <ion-item-sliding *ngFor="let item of items | async">
+              <ion-progress-bar [value]="item.note.s3c1/100"></ion-progress-bar>
+            </ion-item-sliding>
+          </ion-list> -->
+          <ion-card-header>
+            <ion-card-title align="left">{{item.nameproject}}"
+            </ion-card-title>
+          </ion-card-header>
+          </ion-list>
+        </ion-card>
+      </ion-grid>
+    </ion-slide>
+    
+    <!--slide 4-->
+    <ion-slide class="text">
+      <ion-text><br><br>
+        <h1>ช่องทางการบริจาค</h1>
+        บ้านเลขที่ 47 หมู่บ้านพหลโยธินกอล์ฟ<br>
+        ถนนพหลโยธิน ซอย 19/1<br>
+        แขวงลาดยาว เขตจตุจักร<br>
+        กรุงเทพฯ 10900<br>
+        <h2>สามารถติดต่อสอบถามเพิ่มเติม</h2>
+        089-895-1306<br>
+        02-513-3038, 02-513-3932<br>
+        E-mail:harry_durance@yahoo.com<br>
+      </ion-text>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

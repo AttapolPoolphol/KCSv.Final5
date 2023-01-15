@@ -1,0 +1,7 @@
+{
+  "name": "KCS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

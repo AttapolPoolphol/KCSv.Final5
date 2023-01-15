@@ -1,0 +1,98 @@
+ion-header{
+    ion-toolbar{
+            --background: green;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+    }
+    ion-title{
+            font-family: 'Kanit', sans-serif;
+    }
+}
+
+ion-content{
+    font-family: 'Kanit', sans-serif;
+
+    ion-text{
+    font-size: small;
+    margin-left: 10%;
+
+    }
+    ion-button{
+
+        font-family: 'Kanit', sans-serif;
+    }
+    
+    p{
+        font-weight: 600;
+    }
+    ion-img{
+        padding-right: 80%;
+        position: fixed;
+        height: 30pt;
+    }
+    .c{
+        padding-right: 0%;
+        padding-left: 28%;
+        height: 30pt;
+    }
+    .amount{
+       
+        font-size: smaller;
+        font-weight: 800;
+        margin-left: 20%; 
+        
+        
+        
+        
+        .a{
+            font-size: smaller;
+            font-weight: 300;
+            margin-left: 20%;
+        }
+        .b{
+            font-size: smaller;
+        }
+    }
+
+
+    ion-list{
+        ion-item-sliding{
+            color: green;
+        }
+    }
+
+    ion-button{
+        border-color: green;
+    }
+    ion-card{
+        font-family: 'Kanit', sans-serif;
+        width: auto;
+        height: auto;
+    }
+}
+
+ion-card{
+    font-family: 'Kanit', sans-serif;
+    border-radius: 20px;
+    border-style: hidden;
+    color: black;
+    
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        transform: scale(1.1,1.1) rotate(1deg);
+        transition: 600ms all ease-in-out;
+    }
+}
+.swiper-slide-active{
+    transform: scale(1.05,1.05);
+    ion-card{
+        img{
+            transform: scale(1,1);
+        }
+    }
+}
+.swiper-slide{
+    transition: 400ms all ease-in-out;
+}

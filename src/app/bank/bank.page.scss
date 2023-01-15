@@ -1,0 +1,43 @@
+ion-header{
+    ion-toolbar{
+        font-family:'Kanit', sans-serif;    }
+}
+
+ion-content{
+    font-family:'Kanit', sans-serif;    
+
+    h1{
+        font-size: medium;
+        padding-left: 10%;
+    }
+    .bank{
+        width:20%;
+        height: 50%;
+        position: absolute;
+    }
+    
+    ion-card{
+        background-color: rgb(78, 15, 138);
+        border-radius: 20px;
+        
+        ion-card-subtitle{
+            padding-left: 40%;
+            font-size:small;
+            color: white;
+            font-family:'Kanit', sans-serif;
+            font-weight: 500;
+            
+            
+        }
+        .num{
+            font-size:small;
+            }
+    }
+
+    .kbank{
+        
+        background-color: rgb(18, 141, 65);
+    }
+
+    
+}

@@ -1,0 +1,65 @@
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+<style>
+  .font {
+    font-family: 'Kanit', sans-serif;
+  }
+</style>
+
+
+<ion-content class="ion-padding">
+  <form class="form" [formGroup]="user">
+    <svg class="back-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#8295A3" d="M68.6,-33.5C81.6,-17.2,79.6,13.8,65.7,37.6C51.8,61.3,25.9,77.8,2.1
+    ,76.6C-21.7,75.4,-43.5,56.5,-54.2,34.6C-65,12.7,-64.8,-12.3,-53.9,-27.4C-43,-42.4,-21.5,-47.6
+    ,3.2,-49.4C27.9,-51.2,55.7,-49.7,68.6,-33.5Z" transform="translate(100 100)" />
+    </svg>
+    <img style="height: 180 ;" src="assets/icon/regis1.png">
+
+    <!--ช่อง ชื่อ-นามสกุล-->
+    <ion-text>ชื่อ-นามสกุล</ion-text><br>
+    <div class="wrap-input">
+      <ion-input class="input" #Rname type="text" formControlName="Cname" placeholder=" ชื่อ-นามสกุล" value="">
+      </ion-input>
+    </div>
+
+    <!--ช่อง วันเกิด-->
+    <ion-text>วัน/เดือน/ปีเกิด</ion-text><br>
+    <div class="wrap-input">
+      <ion-datetime class="input" #Rbirth  formControlName="Cbirth" displayFormat="DD / MM / YYYY" placeholder="วัน/เดือน/ปีเกิด"></ion-datetime>
+    </div>
+    
+
+    <!--ช่อง เบอร์โทรศัพท์-->
+    <ion-text>เบอร์โทรศัพท์</ion-text><br>
+    <div class="wrap-input">
+      <ion-input class="input" #Rphone type="text" formControlName="Cphone" placeholder=" เบอร์โทรศัพท์" value="">
+      </ion-input>
+    </div>
+
+    <!--ช่อง email-->
+    <ion-text>email</ion-text><br>
+    <div class="wrap-input">
+      <ion-input class="input" #Remail type="text" formControlName="Cemail" placeholder=" อีเมล์"></ion-input>
+    </div>
+    <!---->
+
+    <!--ช่อง รหัส-->
+    <ion-text>รหัสผ่านต้องมากว่า 5 ตัวขึ้นไป</ion-text><br>
+    <div class="wrap-input">
+      <ion-input class="input" #Rpass type="password" formControlName="Cpassword" class="form-controll"
+        placeholder=" รหัสผ่าน" required></ion-input>
+    </div>
+    <!---->
+
+    <div class="container-form-btn">
+      <ion-button type="submit" (click)="SentData()" class="submit-btn" [disabled]="!user.valid">สมัครสมาชิก</ion-button>
+      <label class="error-message">{{errorMessage}}</label>
+      <label class="success-message">{{successMessage}}</label>
+    </div>
+
+  </form>
+  <div class="ion-no-border">
+    <p class="ion-text-center font">หากเป็นสมาชิกอยู่แล้ว <a (click)="goLoginPage()">เข้าสู่ระบบ</a></p>
+  </div>
+
+</ion-content>

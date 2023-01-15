@@ -1,0 +1,35 @@
+ion-header{
+    ion-toolbar{
+        font-family:'Kanit', sans-serif;
+
+            padding-right: 50px;
+    --background: green;
+            color: white;
+
+    }
+}
+
+ion-content{
+    --background: rgb(236, 255, 235);
+    ion-text{
+        font-family:'Kanit', sans-serif;
+        padding-top: 30%;
+    }
+   
+    ion-card-title{
+        font-family:'Kanit', sans-serif;
+        font-size: medium;
+    }
+
+    .fi{
+        font-size: small;
+        padding-right: 60%;
+        color: rgb(36, 206, 59);
+    }
+   
+} 
+
+.date{
+    font-size: small;
+}
+

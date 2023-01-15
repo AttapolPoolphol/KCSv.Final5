@@ -1,0 +1,64 @@
+<ion-header *ngFor="let item of items | async">
+  <ion-list *ngIf="item.type == 'บริจาคระดมทุน' && item.project_id == project_id">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"  fill="clear" color="black">
+        <ion-icon name="arrow-back-outline"></ion-icon>      
+      </ion-button>
+    </ion-buttons>  
+    <h4 >{{item.nameproject}}</h4>
+  </ion-toolbar>
+  </ion-list>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of items | async" >
+    <ion-list *ngIf="item.type == 'บริจาคระดมทุน' && item.project_id == project_id">
+  <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card>
+        <img src="{{item.image}}">
+      </ion-card>
+    </ion-slide>
+    <ion-slide *ngIf="item.image2">
+      <ion-card>
+        <img src="{{item.image2}}">
+      </ion-card>
+    </ion-slide>
+    <ion-slide *ngIf="item.image3">
+      <ion-card>
+        <img src="{{item.image3}}">
+      </ion-card>
+    </ion-slide>
+    <ion-slide *ngIf="item.image4">
+      <ion-card>
+        <img src="{{item.image4}}">
+      </ion-card>
+    </ion-slide>
+</ion-slides>
+
+  <ion-img  src="assets/icon/target.png"></ion-img>
+  <!--<ion-img class="c" src="assets/icon/dollar.png"></ion-img>-->
+  <ion-text class="amount">
+    {{item.goal | number}} 
+    <div class="a">เป้าหมายในการบริจาค</div>
+  </ion-text>
+  <br>
+  <!-- <ion-list *ngIf="items"  class=" ion-padding" >
+    <ion-item-sliding *ngFor="let item of items | async">
+      <ion-progress-bar [value]="item.note.s1c1/100"></ion-progress-bar>
+    </ion-item-sliding>
+  </ion-list> -->
+
+  <ion-card class="ion-padding">
+
+  <ion-text class="ion-padding" >
+{{item.detail}}
+  </ion-text><br>
+  <div align = 'center'><br>
+  <ion-button (click)="goTransfer()">ร่วมบริจาค</ion-button>
+</div>
+</ion-card>
+</ion-list>
+</ion-list>
+</ion-content>

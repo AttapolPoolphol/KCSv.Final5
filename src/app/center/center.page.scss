@@ -1,0 +1,130 @@
+ion-content{
+    
+    ion-label{
+        font-size: x-small;
+        font-family:'Kanit', sans-serif;
+        
+    }
+    
+    
+    ion-card-content{
+      font-family:'Kanit', sans-serif;
+      
+      
+    }
+    ion-img{
+        width: 100%;
+        height: 90%;
+    }
+    
+    
+    .titles{
+        font-family:'Kanit', sans-serif;
+        font-size: large;
+        
+        padding: 0 2rem;
+    }
+
+    
+   
+       .mask {
+         img {
+           width: 220px;
+           position: absolute;
+           bottom: 0px;
+           left: 160px;
+           mask-image: linear-gradient(to top, rgba(0,0,0,.1), rgba(0,0,0,0));
+           -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,.1), rgba(0,0,0,0));
+         }
+       }
+   
+       ion-badge {
+         margin-top: 8px;
+         background: rgba(0,0,0,.2);
+       }
+   
+       ion-card-title {
+         font-size: medium;
+         font-family:'Kanit', sans-serif;
+        
+       }
+   
+       .no {
+         color: rgba(0,0,0,.66);
+         font-weight: bold;
+       }
+   
+      
+
+      .text{
+        font-family:'Kanit', sans-serif;
+        
+      }
+      h1{
+          font-size: large;
+          color: darkgreen;
+      }
+      h2{
+        font-size: large;;
+        font-family:'Kanit', sans-serif;
+        color: darkgreen;
+        
+    }
+    
+    ion-card{
+        //background:url(http://www.elsthai.org/wp-content/uploads/2017/04/27497922_1672726996103879_1079815350_n.jpg);
+        width: fit-content;
+        height: 50%;
+        border-radius: 10%;
+        box-shadow: inset;
+        ion-button{
+          position: absolute;
+          color: invert($color: #000000);
+          font-family:'Kanit', sans-serif;
+          font-size: small;
+          border-radius: 20%;
+          margin-left: 65%;
+          
+        }
+       
+        
+  }
+  ion-card-content{
+    font-size: small;
+    
+  }
+
+    
+}
+
+ion-header{
+    ion-label{
+        font-size: x-small;
+        font-family:'Kanit', sans-serif;
+        
+  
+    }
+    
+    
+    ion-img{
+        box-align: center;
+        height: 40pt;
+    }
+    
+   ion-tab-bar{
+    --background: rgb(184, 240, 184);
+    --border: 100px;
+   }
+   ion-segment{
+    margin: 5px 0;
+    background-color: lightgreen;
+   }
+   
+}
+
+.my-custom-menu {
+    --width: 500px;
+  }
+
+
+

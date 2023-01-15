@@ -1,0 +1,23 @@
+ion-content{
+    --background: rgb(236, 255, 235);
+    font-family:'Kanit', sans-serif;
+    h1{
+        padding-left:60px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    ion-card{
+        border-radius: 20px;
+        
+        ion-input{
+            font-family:'Kanit', sans-serif;
+        }
+        
+    }
+    img{
+            padding-top: 280px;
+            padding-left: 20px;
+        }
+        
+}
